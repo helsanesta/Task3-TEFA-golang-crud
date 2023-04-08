@@ -7,7 +7,7 @@ import (
 )
 
 type Material struct {
-	MaterialID   primitive.ObjectID
+	ID          primitive.ObjectID
 	CourseName   string
 	MaterialName string
 	Description  string

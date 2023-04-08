@@ -29,13 +29,13 @@ func GetAllMaterial(c *gin.Context) {
 
 	defer cursor.Close(ctx)
 
-	var courses []model.Course
-	if err = cursor.All(ctx, &courses); err != nil {
+	var materials []model.Material
+	if err = cursor.All(ctx, &materials); err != nil {
 		c.JSON(http.StatusInternalServerError, gin.H{"message": err})
 		return
 	}
 
-	c.JSON(http.StatusOK, gin.H{"message": "success", "Data": courses})
+	c.JSON(http.StatusOK, gin.H{"message": "success", "Data": materials})
 }
 
 func CreateMaterial(c *gin.Context) {
@@ -52,7 +52,7 @@ func CreateMaterial(c *gin.Context) {
 	}
 
 	materialPayload := model.Material{
-		MaterialID:   primitive.NewObjectID(),
+		ID:           primitive.NewObjectID(),
 		CourseName:   material.CourseName,
 		MaterialName: material.MaterialName,
 		Description:  material.Description,
