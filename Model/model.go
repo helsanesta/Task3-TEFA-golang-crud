@@ -1,10 +1,19 @@
-package model
+package Model
 
 import (
 	"time"
 
 	"go.mongodb.org/mongo-driver/bson/primitive"
 )
+
+type Material struct {
+	MaterialID   primitive.ObjectID
+	CourseName   string
+	MaterialName string
+	Description  string
+	CreatedAt    time.Time
+	UpdatedAt    time.Time
+}
 
 type Course struct {
 	ID          primitive.ObjectID
