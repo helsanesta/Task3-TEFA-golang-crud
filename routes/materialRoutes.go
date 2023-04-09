@@ -103,7 +103,7 @@ func CreateMaterial(c *gin.Context) {
 		UpdatedAt:    time.Now(),
 	}
 
-	// use map to store material payload
+	// use map  to store material payload
 	data := make(map[string]interface{})
 	data["id"] = materialPayload.ID.Hex()
 	data["coursename"] = materialPayload.CourseName
