@@ -27,6 +27,9 @@ func main() {
 	// called as localhost:3000/materials
 	router.GET("/materials", routes.GetAllMaterial)
 
+	// called as localhost:3000/materials/:id
+	router.GET("/materials/:materialID", routes.GetOneMaterial)
+
 	// called as localhost:3000/materials
 	router.POST("/materials", routes.CreateMaterial)
 
