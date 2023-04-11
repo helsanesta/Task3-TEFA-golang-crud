@@ -28,16 +28,16 @@ func main() {
 	router.GET("/materials", routes.GetAllMaterial)
 
 	// called as localhost:3000/materials/:id
-	router.GET("/materials/:materialID", routes.GetOneMaterial)
+	router.GET("/material/:materialID", routes.GetOneMaterial)
 
 	// called as localhost:3000/materials
 	router.POST("/materials", routes.CreateMaterial)
 
 	// called as localhost:3000/materials/:id
-	router.PUT("/materials/:materialID", routes.UpdateMaterial)
+	router.PUT("/material/:materialID", routes.UpdateMaterial)
 
 	// called as localhost:3000/materials/:id
-	router.DELETE("/materials/:materialID", routes.DeleteMaterial)
+	router.DELETE("/material/:materialID", routes.DeleteMaterial)
 
 	router.Run("localhost: 3000")
 }
