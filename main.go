@@ -9,19 +9,19 @@ import (
 func main() {
 	router := gin.Default()
 
-	router.POST("/create", routes.CreateCourse)
+	router.POST("/courses", routes.CreateCourse)
 
 	// called as localhost:3000/getAll
-	router.GET("/get", routes.GetAllCourses)
+	router.GET("/courses", routes.GetAllCourses)
 
 	// called as localhost:3000/get/{id}
-	router.GET("/get/:courseID", routes.ReadOneCourse)
+	router.GET("/course/:courseID", routes.ReadOneCourse)
 
 	// called as localhost:3000/update/{id}
-	router.PUT("/update/:courseID", routes.UpdateCourse)
+	router.PUT("/course/:courseID", routes.UpdateCourse)
 
 	// called as localhost:3000/delete/{id}
-	router.DELETE("/delete/:courseID", routes.DeleteCourse)
+	router.DELETE("/course/:courseID", routes.DeleteCourse)
 
 	router.Run("localhost: 3000")
 }
