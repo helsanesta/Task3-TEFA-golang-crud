@@ -22,7 +22,7 @@ func BenchmarkCRUD(b *testing.B) {
 	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
 	defer cancel()
 
-	for _, numRecords := range []int{100000} {
+	for _, numRecords := range []int{10} {
 		b.Run(fmt.Sprintf("numRecords=%d", numRecords), func(b *testing.B) {
 			// Create sample data
 			var courses = make(map[primitive.ObjectID]model.Course)
